@@ -1,0 +1,78 @@
+<!--
+https://github.com/supermedium/aframe-environment-component
+https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js
+https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js
+-->
+<html>
+  <head>
+    <title>Box World</title>
+    <script src="aframe.min.js"></script>   
+    <script>
+      let rnd = (l,u) => Math.floor(Math.random() * (u-l) + l);
+      let rndColor = () => "rgb(" + rnd(0,256) + "," + rnd(0,256) + "," + rnd(0,256) + ")";
+      let createBox = () =>{
+          el = document.createElement("a-box");
+          el.setAttribute("position",{x:rnd(-10,10),y:rnd(-10,10),z:rnd(-20,10)});
+          el.setAttribute("rotation",{x:rnd(0,3)*45,y:rnd(0,3)*45,z:rnd(0,3)*45});
+          el.setAttribute("height",1);
+          el.setAttribute("width",1);
+          el.setAttribute("depth",1);
+          el.setAttribute("material",{opacity: 0.75, side:"double", color:rndColor()});
+          return el;
+        }
+      window.onload = () => {
+        console.log("Page loaded");
+        let scene = document.getElementById("myScene");
+
+        for(let i = 0; i < 200; i++){
+          scene.appendChild(createBox());
+        }
+        let myBox = document.getElementById("myBox")
+        let x = 0,dx = 0.03, y = 0, dy = 0.02, z = -2, dz = -0.01;
+        setInterval(function(){
+          x+= dx;
+          y+= dy;
+          z+= dz;
+          if(x > 6 || x < -6) dx = -dx;
+          if(y > 6 || y < -6) dy = -dy;
+          if(z > 0 || z < -10) dz = -dz;
+          if(z < -5 && x > 0 && y < 0) 
+            myBox.setAttribute("color","blue");
+          else if(z < -5 && x > 0 && y > 0) 
+            myBox.setAttribute("color","red");
+          else if(z < -5 && x < 0 && y < 0) 
+            myBox.setAttribute("color","green");
+          else if(z < -5 && x < 0 && y > 0) 
+            myBox.setAttribute("color","yellow")
+          else if(z > -5 && x > 0 && y < 0) 
+            myBox.setAttribute("color","cyan");
+          else if(z > -5 && x > 0 && y > 0) 
+            myBox.setAttribute("color","magenta");
+          else if(z > -5 && x < 0 && y < 0) 
+            myBox.setAttribute("color","orange");
+          else if(z > -5 && x < 0 && y > 0) 
+            myBox.setAttribute("color","brown")
+
+          myBox.setAttribute("position",x  + " " + y + " " + (z-5));
+        },10)
+      }
+    </script>
+  </head>
+  <body>
+    <a-scene id="myScene">
+      <a-torus-knot radius='0.5' radius-tubular='0.05' position="0 0 -5"
+          material="color:red"
+          animation="property: rotation; to:360 0 360; dur: 3000; easing: linear; loop: true">
+      </a-torus-knot>
+      <a-box id="myBox" depth="1" height="1" width="1" position='0 0.5 -5' 
+          material='opacity: 0.5; side:double; color:blue;'
+          animation="property: rotation; to:360 360 0; dur: 5000; easing: linear; loop: true"
+          ></a-box>
+      <a-sky color="#000"></a-sky>
+      <a-camera>
+        <a-cursor intersection-spawn="event: click; mixin: voxel"></a-cursor>
+      </a-camera>
+    </a-scene>
+ 
+  </body>
+</html>

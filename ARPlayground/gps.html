@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- https://github.com/jeromeetienne/AR.js -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="message"></div>
+    <script src="script.js"></script>
+    <script>
+        window.onload = function() {
+          let message = document.getElementById("message");
+          if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(showPosition);
+          } else {
+            message.innerHTML = "Geolocation is not supported.";
+          }
+        }
+        function showPosition(position) {
+          let message = document.getElementById("message");
+          message.innerHTML = "Latitude: " + position.coords.latitude +
+          "<br>Longitude: " + position.coords.longitude;
+        }
+    </script> 
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!--
+https://github.com/supermedium/aframe-environment-component
+https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js
+https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js
+-->
+<html>
+  <head>
+    <script src="static/js/aframe.min.js"></script>
+    <script src="static/js/aframe-environment-component.min.js"></script>
+    <script src="static/js/aframe-event-set-component.min.js"></script>
+    
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="allosaurus" src="static/dinosaurs/allosaurus/scene.gltf"></a-asset-item>
+        <!--<a-asset-item id="carnotaurus" src="dinosaurs/carnotaurus/scene.gltf"></a-asset-item>-->
+        <a-asset-item id="ceratosaurus" src="static/dinosaurs/ceratosaurus/scene.gltf"></a-asset-item>
+        <a-asset-item id="diplodocus" src="static/dinosaurs/diplodocus/scene.gltf"></a-asset-item>
+        <a-asset-item id="dimorphodon" src="static/dinosaurs/dimorphodon/scene.gltf"></a-asset-item>
+        <a-asset-item id="dracorex" src="static/dinosaurs/dracorex/scene.gltf"></a-asset-item>
+        <a-asset-item id="gorgosaurus" src="static/dinosaurs/gorgosaurus/scene.gltf"></a-asset-item>
+        <a-asset-item id="quetzalcoatlus" src="static/dinosaurs/quetzalcoatlus/scene.gltf"></a-asset-item>
+        <a-asset-item id="spinosaurus" src="static/dinosaurs/spinosaurus/scene.gltf"></a-asset-item>
+        <a-asset-item id="tarbosaurus" src="static/dinosaurs/tarbosaurus/scene.gltf"></a-asset-item>
+        <a-asset-item id="tupuxuara" src="static/dinosaurs/tupuxuara/scene.gltf"></a-asset-item>
+
+        <img id="bone" src="static/images/bone.jpg">
+      </a-assets>
+           
+      <a-entity gltf-model="#allosaurus" position="-5 2 -5"
+                event-set__enter="_event: mouseenter; _target: #title_allosaurus; visible: true"
+                event-set__leave="_event: mouseleave; _target: #title_allosaurus; visible: false" >
+
+                <a-text id="title_allosaurus" value="Allosaurus" align="center" color="#f00" 
+                        visible="false" position="1.5 0 3" geometry="primitive: plane; width: 1.75;" 
+                        material="src:#bone;color:#700"></a-text></a-entity>
+      <a-entity gltf-model="#ceratosaurus" position="0 2 -5"
+                event-set__enter="_event: mouseenter; _target: #title_ceratosaurus; visible: true"
+                event-set__leave="_event: mouseleave; _target: #title_ceratosaurus; visible: false" >
+
+                <a-text id="title_ceratosaurus" value="Ceratosaurus" align="center" color="#f00" 
+                        visible="false" position="1.5 0 3" geometry="primitive: plane; width: 1.75;" 
+                        material="src:#bone;color:#700"></a-text></a-entity>
+      
+      <a-entity gltf-model="#diplodocus" position="5 3 -6" 
+                event-set__enter="_event: mouseenter; _target: #title_diplodocus; visible: true"
+                event-set__leave="_event: mouseleave; _target: #title_diplodocus; visible: false" >
+
+                <a-text id="title_diplodocus" value="Diplodocus" align="center" color="#f00" 
+                        visible="false" position="1.5 0 3" geometry="primitive: plane; width: 1.75;" 
+                        material="src:#bone;color:#700"></a-text></a-entity>
+      <!--<a-entity gltf-model="#dimorphodon" position="0 4 -5" ></a-entity>
+      <a-entity gltf-model="#dracorex" position="10 2 -4" rotation="0 90 0"></a-entity>
+      <a-entity gltf-model="#gorgosaurus" position="15 20 -160" rotation="0 45 0" ></a-entity>
+      <a-entity gltf-model="#quetzalcoatlus" position="-2.5 1 -2"></a-entity>
+      <a-entity gltf-model="#spinosaurus" position="-15 6 -20" rotation="0 -90 0"></a-entity>
+      <a-entity gltf-model="#tarbosaurus" position="15 5 -25" ></a-entity>
+      <a-entity gltf-model="#tupuxuara" position="-5 4 -5" ></a-entity>-->
+      <a-entity environment="preset: volcano; groundColor: #445; grid: cross"></a-entity>
+      <a-camera>
+        <a-cursor
+          intersection-spawn="event: click; mixin: voxel"
+        ></a-cursor>
+      </a-camera>
+    </a-scene>
+ 
+  </body>
+</html>

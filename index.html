@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Exploring AFrame</title> 
+    <style>
+        body{
+            font-family:Arial;
+        }
+        /* Exploring flexbox and media queries */
+        #container{
+            text-align: center;
+            display: flex;
+        }
+        @media only screen and (max-width: 1200px) {
+            #container{
+                flex-direction:column;
+            }
+        }
+        .worlds{
+            flex:1;
+            margin:5px;
+            padding-bottom:15px;
+            border-bottom:solid gray 1px;
+        }
+        .worlds img{
+            width:100%
+        }
+        .worlds div{
+            padding:5px;
+            font-size:1.1em;
+        }
+        #title{
+            background-color:black;
+            color:white;
+            font-size:5em;
+            text-align:center;
+            padding:10px;
+        }
+        .viewWorld{
+            background-color:black;
+            padding:5px;
+            margin:10px;
+            box-shadow:1px 1px 1px gray;
+            color:white;
+            font-size:1.25em;
+            border-radius:4px;
+            text-decoration: none;
+            text-shadow: -1px -1px gray;
+        }
+    </style>
+  </head>
+  <body style='margin : 0px;'>
+    <div id="title">Exploring AFrame</div>
+    <div id="container">
+
+        <div class="worlds">
+            <h2>Dinosaur World</h2>
+            <a href="dinosaurWorld/">
+                <img src="dinosaurWorld.png" />
+            </a>
+            <div>
+                <p>Dinosaur World was the first exploration into 3D models found at <a href="https://sketchfab.com/" target="_blank">Sketchfab</a>.  
+                Having found a few models of dinosaurs, I was inspired to create a world where you could view these dinosaurs.  
+                Using AFrame, I learned to load assets, render &lt;a-entity &gt; with gltf-model, environment and text as well as react to mouse enter and leave 
+                events on an entity in order to display a panel of information.</p>
+                <p>As a side project, I added a small Flask application to externally serve a locally hosted version of Dinosaur World.</p>
+            </div>
+            <a href="dinosaurWorld/" class="viewWorld">View</a>
+        </div>
+        <div class="worlds">
+            <h2>Character World</h2>
+            <a href="characterWorld/">
+                <img src="characterWorld.png" />
+            </a>
+            <div>    
+                <p>Character World was born from the discovery of the animated walking 3D model found at <a href="https://sketchfab.com/" target="_blank">Sketchfab</a> of Kitana from Mortal Kombat.  
+                I struggled with getting the 3D model to animate until I found the <a href="https://github.com/donmccurdy/aframe-extras" target="_blank">
+                aframe-extras</a> library and adding the animation-mixer attribute to the entity.</p>
+                <p>Character World also explored dynamically controlling the position and rotation of a 3D model.</p>
+            </div>
+            <a href="characterWorld/" class="viewWorld">View</a>
+        </div>
+        <div class="worlds">
+            <h2>Box World</h2>
+            <a href="boxWorld/">
+                <img src="boxWorld.png" />
+            </a>
+            <div>
+                <p>Box World explored dynamically creating <br/>&lt;a-box&gt; and randomizing the color and position in the world.
+                One box was used to explore dynamically moving through the x,y, and z axis. There is also a &lta-torus-knot&gt; at (0,0,-5)
+                just for fun.  I also had the opportunity to experiment with the animation attribute of entity to rotate it.
+                </p>
+            </div>
+            <a href="boxWorld/" class="viewWorld">View</a>
+        </div>
+        <div class="worlds">
+            <h2>AR Playground</h2>
+            <a href="ARPlayground/">
+                <img src="ARPlayground.png" />
+            </a>
+            <div>
+                <p>AR Playground was the initial project that inspired the exploration in AFrame. 
+                Using <a href="https://github.com/jeromeetienne/AR.js" target="_blank">AR.js</a>
+                I could display 3D models upon viewing <a href="https://commons.wikimedia.org/wiki/File:Hiro_marker_ARjs.png" target="_blank">Hiro</a> 
+                and <a href="https://commons.wikimedia.org/wiki/File:Kanji_marker_ARjs.png" target="_blank">Kanji</a> markers with a camera.</p>
+                <p>Building on the initial examples, I started to explore location based markers unsuccessfully.  Included in the AR Playground is an 
+                example that retrieve GPS location via navigator.geolocation.</p>
+            </div>
+            <a href="ARPlayground/" class="viewWorld">View</a>
+        </div>
+    </div>
+
+    
+  </body>
+</html>

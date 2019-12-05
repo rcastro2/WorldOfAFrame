@@ -1,0 +1,379 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 15138,
+      "max": [
+        3.3423421382904053,
+        -46.927055358886719,
+        12.816061973571777
+      ],
+      "min": [
+        -3.3429257869720459,
+        -59.839244842529297,
+        0.30937978625297546
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 181656,
+      "componentType": 5126,
+      "count": 15138,
+      "max": [
+        0.99999278783798218,
+        0.99971365928649902,
+        0.99973112344741821
+      ],
+      "min": [
+        -0.99996465444564819,
+        -0.99983876943588257,
+        -0.99836409091949463
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 15138,
+      "max": [
+        0.99999606609344482,
+        0.99984687566757202,
+        0.9999992847442627,
+        1
+      ],
+      "min": [
+        -0.99921345710754395,
+        -0.99995702505111694,
+        -0.99992424249649048,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 242208,
+      "componentType": 5126,
+      "count": 15138,
+      "max": [
+        0.92156863212585449,
+        0.89803922176361084,
+        0.85490196943283081,
+        1
+      ],
+      "min": [
+        0.21960784494876862,
+        0.16078431904315948,
+        0.094117648899555206,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 15138,
+      "max": [
+        0.97675001621246338,
+        0.93520998954772949
+      ],
+      "min": [
+        0.065619997680187225,
+        0.32038998603820801
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 81480,
+      "max": [
+        15137
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 363312,
+      "componentType": 5126,
+      "count": 8573,
+      "max": [
+        21.596593856811523,
+        76.518173217773438,
+        24.351692199707031
+      ],
+      "min": [
+        -21.596593856811523,
+        -60.320888519287109,
+        -30.406148910522461
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 466188,
+      "componentType": 5126,
+      "count": 8573,
+      "max": [
+        0.99998754262924194,
+        0.99965512752532959,
+        0.99998646974563599
+      ],
+      "min": [
+        -0.99999237060546875,
+        -0.99998199939727783,
+        -0.99992901086807251
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 484416,
+      "componentType": 5126,
+      "count": 8573,
+      "max": [
+        0.9999968409538269,
+        0.99955499172210693,
+        0.99997842311859131,
+        1
+      ],
+      "min": [
+        -0.99994426965713501,
+        -0.9988095760345459,
+        -0.99981731176376343,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 621584,
+      "componentType": 5126,
+      "count": 8573,
+      "max": [
+        0.89019608497619629,
+        0.89019608497619629,
+        0.88235294818878174,
+        1
+      ],
+      "min": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 121104,
+      "componentType": 5126,
+      "count": 8573,
+      "max": [
+        0.99804002046585083,
+        0.93305999040603638
+      ],
+      "min": [
+        0.0019499999471008778,
+        0.0019499999471008778
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 325920,
+      "componentType": 5125,
+      "count": 46812,
+      "max": [
+        8572
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Boycraft (https://sketchfab.com/boycraft)",
+      "license": "CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)",
+      "source": "https://sketchfab.com/3d-models/tarbosaurus-c2bbb86a67a54e11b22942ec410d2dc1",
+      "title": "Tarbosaurus"
+    },
+    "generator": "Sketchfab-6.49.1",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 513168,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 189688,
+      "byteOffset": 513168,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 569064,
+      "byteOffset": 702856,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 758752,
+      "byteOffset": 1271920,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 2030672,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/defaultMat_baseColor.png"
+    },
+    {
+      "uri": "textures/defaultMat_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "defaultMat",
+      "normalTexture": {
+        "index": 1,
+        "scale": 1,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "COLOR_0": 3,
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 4
+          },
+          "indices": 5,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "COLOR_0": 9,
+            "NORMAL": 7,
+            "POSITION": 6,
+            "TANGENT": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3,
+        4
+      ],
+      "name": "talbo.OBJ.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": ""
+    },
+    {
+      "mesh": 1,
+      "name": ""
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}
+

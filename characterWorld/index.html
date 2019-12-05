@@ -1,0 +1,61 @@
+<!--
+https://github.com/supermedium/aframe-environment-component
+https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js
+https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js
+https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js
+-->
+<html>
+  <head>
+    <title>Character World</title>
+    <script src="js/aframe.min.js"></script>
+    <script src="js/aframe-environment-component.min.js"></script>
+    <script src="js/aframe-event-set-component.min.js"></script>
+    <script src="js/aframe-extras.min.js"></script>
+    
+  </head>
+  <script>
+    var z = -10, dz = 0.015, x = 0, dx = 0.015;
+    var facing = 0, status = "walking";
+    window.onload = () =>{
+      var kitana = document.getElementById("kitana");
+      setInterval(()=>{
+        
+        if(status === "walking"){
+          z += dz;
+          kitana.setAttribute("position",x + " 1 " + z);
+          if(z>-2 || z <-11){
+            dz=-dz;
+            status = "turning"
+          }
+        }else if(status === "turning"){
+          facing += 2;
+          x += dx
+          if(facing % 180 == 0){
+            status = "walking"
+            dx=-dx;
+          }else{
+            kitana.setAttribute("position",x + " 1 " + z);
+            kitana.setAttribute("rotation",`0 ${facing} 0`);
+          }
+          
+        }
+      },10)  
+    }
+  </script>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="kitana-model" src="models/kitana_walking/scene.gltf"></a-asset-item>
+        <a-asset-item id="tunnel" src="models/tunnel_3/scene.gltf"></a-asset-item>
+      </a-assets>
+      <a-entity gltf-model="#tunnel" position="-10 1 0" scale="4 4"></a-entity>></a-entity>
+      <a-entity id="kitana" gltf-model="#kitana-model" position="0 0 -4" animation-mixer></a-entity>      
+      <a-camera>
+        <a-cursor
+          intersection-spawn="event: click; mixin: voxel"
+        ></a-cursor>
+      </a-camera>
+    </a-scene>
+ 
+  </body>
+</html>
