@@ -7,11 +7,8 @@ https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.m
 <html>
   <head>
     <title>Character World</title>
-    <script src="js/aframe.min.js"></script>
-    <script src="js/aframe-environment-component.min.js"></script>
-    <script src="js/aframe-event-set-component.min.js"></script>
-    <script src="js/aframe-extras.min.js"></script>
-    
+    <!--<script src="js/aframe.min.js"></script>-->
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
   </head>
   <script>
     var z = -10, dz = 0.015, x = 0, dx = 0.015;
@@ -48,7 +45,7 @@ https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.m
         <a-asset-item id="kitana-model" src="models/kitana_walking/scene.gltf"></a-asset-item>
         <a-asset-item id="tunnel" src="models/tunnel_3/scene.gltf"></a-asset-item>
       </a-assets>
-      <a-entity gltf-model="#tunnel" position="-10 1 0" scale="4 4"></a-entity>></a-entity>
+      <a-entity gltf-model="#tunnel" position="-10 1 0" scale="4 4"></a-entity>
       <a-entity id="kitana" gltf-model="#kitana-model" position="0 0 -4" animation-mixer></a-entity>      
       <a-camera>
         <a-cursor
@@ -58,4 +55,7 @@ https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.m
     </a-scene>
  
   </body>
+  <script src="js/aframe-environment-component.min.js"></script>
+  <script src="js/aframe-event-set-component.min.js"></script>
+  <script src="js/aframe-extras.min.js"></script>
 </html>
